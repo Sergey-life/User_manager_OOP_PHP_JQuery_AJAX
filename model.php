@@ -56,6 +56,20 @@
                 }
             }
         }
+
+        public function fetch()
+        {
+            $data = null;
+
+            $stmt = $this->conn->prepare("SELECT * FROM records");
+
+            $stmt->execute();
+
+            $data = $stmt->fetchAll();
+
+            return $data;
+        }
+        
     }
 
 ?>

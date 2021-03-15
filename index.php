@@ -46,6 +46,12 @@
             </form>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12 mt-1">
+            <div id="fetch"></div>
+        </div>
+    </div>
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
@@ -78,12 +84,27 @@
                 submit:submit
             },
             success: function (data) {
+                fetch();
                 $("#result").html(data);
             }
         });
 
         $("#form")[0].reset();
     });
+
+    // Fetch records
+    function fetch() {
+
+        $.ajax({
+            url: "fetch.php",
+            type: "post",
+            success: function (data) {
+                $("#fetch").html(data);
+            }
+
+        });
+    }
+    fetch();
 </script>
 </body>
 </html>
