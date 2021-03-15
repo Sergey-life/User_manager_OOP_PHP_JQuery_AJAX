@@ -34,9 +34,9 @@
                     <td><?php echo $row['surname']; ?></td>
                     <td><?php echo $row['position']; ?></td>
                     <td>
-                        <a href="#" id="read" class="btn btn-info">Read</a>
-                        <a href="#" id="edit" class="btn btn-warning">Edit</a>
-                        <a href="#" id="del" class="btn btn-danger">Delete</a>
+                        <a href="#" id="read" class="btn btn-info" value="<?php echo $row['id']; ?>">Read</a>
+                        <a href="#" id="edit" class="btn btn-warning" value="<?php echo $row['id']; ?>">Edit</a>
+                        <a href="#" id="del" class="btn btn-danger" value="<?php echo $row['id']; ?>">Delete</a>
                     </td>
                 </tr>
 

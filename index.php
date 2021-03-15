@@ -49,6 +49,7 @@
 
     <div class="row">
         <div class="col-md-12 mt-1">
+            <div id="show"></div>
             <div id="fetch"></div>
         </div>
     </div>
@@ -105,6 +106,31 @@
         });
     }
     fetch();
+
+    //Delete record
+    $(document).on("click", "#del", function (e) {
+        e.preventDefault();
+        
+        if (window.confirm("Do you want delete record?")) {
+
+            var del_id = $(this).attr("value");
+
+            $.ajax({
+                url: "del.php",
+                type: "post",
+                data: {
+                    del_id:del_id
+                },
+                success: function (data) {
+                    fetch();
+                    $("#show").html(data);
+                }
+            });
+        } else {
+            return false;
+        }
+
+    });
 </script>
 </body>
 </html>

@@ -69,6 +69,27 @@
 
             return $data;
         }
+
+        public function del($del_id)
+        {
+            $query = "DELETE FROM records WHERE id = '$del_id'";
+
+            if ($sql = $this->conn->exec($query)) {
+                echo "
+                    <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
+                      Record delete successfully
+                      <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                    </div>
+                ";
+            } else {
+                echo "
+                    <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">
+                      Not delete
+                      <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                    </div>
+                ";
+            }
+        }
         
     }
 
