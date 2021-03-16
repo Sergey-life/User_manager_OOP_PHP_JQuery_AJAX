@@ -13,7 +13,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
+            <th>#</th>
             <th>Name</th>
             <th>Surname</th>
             <th>Position</th>
@@ -34,7 +34,7 @@
                     <td><?php echo $row['surname']; ?></td>
                     <td><?php echo $row['position']; ?></td>
                     <td>
-                        <a href="#" id="read" class="btn btn-info" value="<?php echo $row['id']; ?>">Read</a>
+                        <a href="#" id="read" class="btn btn-info" value="<?php echo $row['id']; ?>" data-toggle="modal" data-target="#exampleModal">Read</a>
                         <a href="#" id="edit" class="btn btn-warning" value="<?php echo $row['id']; ?>">Edit</a>
                         <a href="#" id="del" class="btn btn-danger" value="<?php echo $row['id']; ?>">Delete</a>
                     </td>
