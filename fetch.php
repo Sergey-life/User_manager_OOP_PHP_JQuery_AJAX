@@ -35,7 +35,7 @@
                     <td><?php echo $row['position']; ?></td>
                     <td>
                         <a href="#" id="read" class="btn btn-info" value="<?php echo $row['id']; ?>" data-toggle="modal" data-target="#exampleModal">Read</a>
-                        <a href="#" id="edit" class="btn btn-warning" value="<?php echo $row['id']; ?>">Edit</a>
+                        <a href="#" id="edit" class="btn btn-warning" value="<?php echo $row['id']; ?>" data-toggle="modal" data-target="#exampleModal_1">Edit</a>
                         <a href="#" id="del" class="btn btn-danger" value="<?php echo $row['id']; ?>">Delete</a>
                     </td>
                 </tr>

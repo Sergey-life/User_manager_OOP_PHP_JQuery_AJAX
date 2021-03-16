@@ -103,7 +103,19 @@
 
             return $data;
         }
-        
+
+        public function edit($edit_id)
+        {
+            $data = null;
+
+            $stmt = $this->conn->prepare("SELECT * FROM records WHERE id='$edit_id'");
+
+            $stmt->execute();
+
+            $data = $stmt->fetch();
+
+            return $data;
+        }
     }
 
 ?>
