@@ -11,7 +11,9 @@
     if (!empty($row)) { ?>
 
         <form action="" method="post" id="form">
-            <div id="result"></div>
+            <div>
+                <input type="hidden" id="edit_id" value="<?php echo $row['id']; ?>">
+            </div>
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" id="edit_name" class="form-control" value="<?php echo $row['name']; ?>">
@@ -23,7 +25,8 @@
             <div class="form-group">
                 <label for="">Position</label>
                 <select name="position" id="edit_position"> 
-                    <option value="программист" selected><?php echo $row['position']; ?></option>
+                    <option hidden value="программист"><?php echo $row['position']; ?></option>
+                    <option value="программист">программист</option>
                     <option value="менеджер">менеджер</option>
                     <option value="тестировщик">тестировщик</option>
                 </select>

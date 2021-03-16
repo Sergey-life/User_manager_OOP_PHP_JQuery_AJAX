@@ -72,7 +72,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="update">Update</button>
+<!--                <button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="update">Update</button>
             </div>
         </div>
     </div>
@@ -215,7 +215,35 @@
            success: function (data) {
                $("#edit_data").html(data);
            }
-       })
+       });
+    });
+
+    //Update record
+
+    $(document).on("click", "#update", function (e) {
+       e.preventDefault();
+
+       var edit_name = $("#edit_name").val();
+       var edit_surname = $("#edit_surname").val();
+       var edit_position = $("#edit_position").val();
+       var update = $("#update").val();
+       var edit_id = $("#edit_id").val();
+
+       $.ajax({
+           url: "update.php",
+           type: "post",
+           data: {
+               edit_id:edit_id,
+               edit_name:edit_name,
+               edit_surname:edit_surname,
+               edit_position:edit_position,
+               update:update
+           },
+           success: function (data) {
+               fetch();
+               $("#show").html(data);
+           }
+       });
     });
 </script>
 </body>

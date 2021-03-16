@@ -116,6 +116,33 @@
 
             return $data;
         }
+
+        public function update($data)
+        {
+            $query = "UPDATE records SET name='$data[edit_name]',surname='$data[edit_surname]',position='$data[edit_position]' WHERE id='$data[edit_id]'";
+
+            if ($sql = $this->conn->exec($query)) {
+
+                echo "
+                    <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
+                  Record update successfully!
+                  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                </div>
+                
+                <script>
+                    $('#exampleModal_1').modal('hide');
+                </script>
+                ";
+            } else {
+                echo "
+                    <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
+                  Failed to update record!
+                  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                </div>
+                ";
+            }
+//            var_dump($data);
+        }
     }
 
 ?>
