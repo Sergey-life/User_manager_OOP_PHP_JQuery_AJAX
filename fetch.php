@@ -6,8 +6,6 @@
 
     $rows = $model->fetch();
 
-//    var_dump($rows)
-
 ?>
 
 <table class="table">

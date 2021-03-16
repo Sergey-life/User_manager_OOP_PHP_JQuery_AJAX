@@ -8,13 +8,13 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <title>Users form</title>
+    <title>User manager</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-12 mt-5">
-            <h1 class="text-center">Users form</h1>
+            <h1 class="text-center">User manager</h1>
             <hr style="height: 1px; color: black; background-color: black;">
         </div>
     </div>

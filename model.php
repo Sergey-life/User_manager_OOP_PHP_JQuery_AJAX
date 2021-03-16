@@ -119,7 +119,7 @@
 
         public function update($data)
         {
-            $query = "UPDATE records SET name='$data[edit_name]',surname='$data[edit_surname]',position='$data[edit_position]' WHERE id='$data[edit_id]'";
+            $query = "UPDATE records SET name='$data[edit_name]', surname='$data[edit_surname]', position='$data[edit_position]' WHERE id='$data[edit_id]'";
 
             if ($sql = $this->conn->exec($query)) {
 
@@ -141,7 +141,6 @@
                 </div>
                 ";
             }
-//            var_dump($data);
         }
     }
 
